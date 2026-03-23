@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw：真正能帮你做事的 AI 助手 - AI 写作指南</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.8; color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh; padding: 40px 20px;
+        }
+        .container { max-width: 800px; margin: 0 auto; background: white; border-radius: 16px; box-shadow: 0 20px 60px rgba(0,0,0,0.3); overflow: hidden; }
+        header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px; text-align: center; }
+        header h1 { font-size: 1.8em; margin-bottom: 10px; }
+        header .subtitle { font-size: 1.1em; opacity: 0.9; }
+        main { padding: 40px; }
+        h2 { color: #667eea; margin: 40px 0 20px; padding-bottom: 10px; border-bottom: 2px solid #f0f0f0; }
+        h3 { color: #555; margin: 25px 0 10px; }
+        p { margin-bottom: 15px; }
+        ul, ol { margin: 15px 0 15px 25px; }
+        li { margin-bottom: 8px; }
+        pre { background: #f5f5f5; padding: 15px; border-radius: 8px; overflow-x: auto; margin: 15px 0; font-size: 0.9em; border-left: 4px solid #667eea; }
+        blockquote { background: #f9f9f9; border-left: 4px solid #764ba2; padding: 15px 20px; margin: 20px 0; font-style: italic; color: #666; }
+        table { width: 100%; border-collapse: collapse; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #667eea; color: white; }
+        a { color: #667eea; }
+        .back-link { display: inline-block; margin-bottom: 20px; color: #667eea; text-decoration: none; }
+        .back-link:hover { text-decoration: underline; }
+        footer { background: #f5f5f5; padding: 20px 40px; text-align: center; color: #888; font-size: 0.9em; }
+        @media (max-width: 600px) { header, main, footer { padding: 20px; } header h1 { font-size: 1.5em; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 OpenClaw：真正能帮你做事的 AI 助手</h1>
+            <p class="subtitle">开源免费、跨平台、强执行能力，让 AI 成为你的数字队友</p>
+        </header>
+        <main>
+            <a href="./index.html" class="back-link">← 返回首页</a>
+            
+            <h2>写在前面</h2>
+            <p>你是否经历过这样的时刻：对着一个 AI 聊天窗口，它能说会道，却始终无法帮你完成一件实事？大多数 AI 工具停留在"能说"的阶段，而 <strong>OpenClaw</strong> 正在改变这一现状——它是一个真正能"干活"的 AI 助手。</p>
+
+            <h2>什么是 OpenClaw？</h2>
+            <p>OpenClaw 是一款开源的个人 AI 助手与自主代理，由 Peter Steinberger 开发。它能真正帮你办实事：管理文件、发送消息、自动化工作流、编写代码、处理数据……让 AI 成为你高效可靠的数字队友。</p>
+
+            <h3>核心特点</h3>
+            <ul>
+                <li><strong>开源免费</strong>：MIT 协议，完全免费</li>
+                <li><strong>跨平台</strong>：支持 macOS、Windows、Linux</li>
+                <li><strong>隐私优先</strong>：运行在你自己的电脑上，数据不出本机</li>
+                <li><strong>多渠道接入</strong>：微信、Telegram、Discord、Slack、iMessage 等 30+ 平台</li>
+            </ul>
+
+            <h2>核心能力</h2>
+
+            <h3>1. 跑在你电脑上</h3>
+            <p>OpenClaw 支持 macOS、Windows、Linux，可以接入 Claude、GPT 或者本地模型（通过 Ollama）。数据完全保存在本地，隐私有保障。</p>
+
+            <h3>2. 聊天软件随便选</h3>
+            <p>支持微信、Telegram、Discord、Slack、Signal、iMessage 等平台，私聊群聊都能用。直接在常用的聊天软件里指挥 AI 干活。</p>
+
+            <h3>3. 越用越懂你</h3>
+            <p>OpenClaw 记得住上下文，了解你的习惯。用得越久，配合越默契。</p>
+
+            <h3>4. 自动操作浏览器</h3>
+            <p>帮你逛网页、填表单、抓数据，解放双手。</p>
+
+            <h3>5. 系统权限随心配</h3>
+            <p>读写文件、跑命令、执行脚本。想要完全控制还是沙盒隔离，你说了算。</p>
+
+            <h3>6. 技能无限扩展</h3>
+            <p>用社区做好的技能，或者自己写一个。它甚至能帮你写新技能。</p>
+
+            <h2>安装方式</h2>
+
+            <h3>macOS</h3>
+            <pre>curl -sSL https://openclaw.ai/install.sh | bash</pre>
+
+            <h3>Windows (PowerShell)</h3>
+            <pre>& ([scriptblock]::Create((iwr -useb https://openclaw.ai/install.ps1))) -Tag beta</pre>
+
+            <h3>Linux</h3>
+            <pre>curl -sSL https://openclaw.ai/install.sh | bash</pre>
+            <p>支持 Ubuntu、Debian、Fedora、Arch 等主流发行版。</p>
+
+            <h2>费用说明</h2>
+            <p>OpenClaw 软件本身完全免费开源。费用主要来自 AI 模型 API 调用：</p>
+            <table>
+                <tr>
+                    <th>使用程度</th>
+                    <th>预估费用</th>
+                </tr>
+                <tr>
+                    <td>轻度使用</td>
+                    <td>$10-30/月</td>
+                </tr>
+                <tr>
+                    <td>日常使用</td>
+                    <td>$30-70/月</td>
+                </tr>
+                <tr>
+                    <td>重度自动化</td>
+                    <td>$100-150+/月</td>
+                </tr>
+            </table>
+            <p>如果想省钱，可以使用 Ollama 运行本地模型，网页搜���可以用 Brave Search 免费套餐（每月 2000 次）。</p>
+
+            <h2>用户真实评价</h2>
+            <blockquote>
+                <p>"Just ran 'openclaw deploy' and watched it set up my entire k8s cluster, configure ingress, and deploy 12 microservices. What used to take me a week now takes 10 minutes."</p>
+                <p>— @devops_mike</p>
+            </blockquote>
+            <blockquote>
+                <p>"OpenClaw just refactored my entire React codebase to TypeScript, added proper error boundaries, and even wrote the unit tests."</p>
+                <p>— @sarahcodes</p>
+            </blockquote>
+            <blockquote>
+                <p>"Asked OpenClaw to optimize my PostgreSQL queries. It analyzed the execution plans, added proper indexes, and reduced query time from 8s to 50ms."</p>
+                <p>— @cloud_native_tom</p>
+            </blockquote>
+
+            <h2>官方资源</h2>
+            <ul>
+                <li><strong>官网</strong>: <a href="https://openclaws.io/zh/" target="_blank">openclaws.io</a></li>
+                <li><strong>文档</strong>: <a href="https://docs.openclaw.ai/zh-CN" target="_blank">docs.openclaw.ai</a></li>
+                <li><strong>GitHub</strong>: <a href="https://github.com/openclaw/openclaw" target="_blank">github.com/openclaw/openclaw</a> (191,000+ Stars)</li>
+            </ul>
+
+            <h2>结语</h2>
+            <blockquote>
+                <p>AI 不会取代程序员，但会用 AI 的程序员会取代不会用 AI 的程序员。</p>
+            </blockquote>
+            <p>OpenClaw 正是这样一个工具——它不是要取代你，而是成为你的数字队友，帮你处理那些繁琐重复的工作，让你专注于真正重要的事情。</p>
+
+            <hr style="margin: 40px 0; border: none; border-top: 1px solid #eee;">
+            <p style="color: #888; font-size: 0.9em;">*本文档由 AI 辅助编写，内容基于 OpenClaw 官方资料。*</p>
+        </main>
+        <footer>
+            <p>🚀 部署于 GitHub Pages</p>
+        </footer>
+    </div>
+</body>
+</html>
